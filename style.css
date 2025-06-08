@@ -336,6 +336,42 @@ footer {
     border-bottom: 4px solid #c1d0d4;
 }
 
+.basic-main img{
+    padding-top: 10vh;
+}
+
+.basic-main h2 {
+    font-size: 36px;
+    padding: 20px;
+}
+
+.basic-main button{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.basic-main #stopBtn{
+    color: #f33;
+}
+
+.basic-main button:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.basic-main #output{
+    width: 85%;
+    height: 50vh;
+    overflow-y: scroll;
+    border: 2px solid #c1d0d4;
+    border-radius: 16px;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
@@ -432,8 +468,18 @@ footer {
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    #login-form img{
+    #login-form img,
+    .basic-main img {
+        width: 85%;
+    }
+    .basic-main{
         width: 100%;
+    }
+
+    .basic-main button{
+        width: 100px;
+        height: 100px;
+        font-size: 48px;
     }
     footer {
         font-size: 16px;

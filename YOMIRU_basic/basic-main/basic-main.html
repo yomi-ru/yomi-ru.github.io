@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=q, initial-scale=1.0">
-    <title>メイン</title>
+    <title>YOMIRU_basic</title>
+    <link rel="stylesheet" href="../../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    
+    <div class="basic-main">
+        <img src="../../images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px">
+        <h2>YOMIRU_basic</h2>
+        <button id="startBtn">▶</button>
+        <button id="stopBtn">⏹</button>
+        <button id="saveBtn">💾</button>
+
+        <div id="output">認識したテキストが出力されます。</div>
+        <div id="log"></div>
+        <footer>2025 ©︎YOMIRU project<br>All rights reserved.</footer>
+    </div>
+
+    <script>
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!SpeechRecognition) {
+            alert("Web Speech API はこのブラウザで使えないよ😭 Chromeで開いてね！");
+        } else {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.continuous = true;
+
+            let outputDiv = document.getElementById('output');
+            let logDiv = document.getElementById('log');
+            let fullTranscript = '';
+
+            recognition.onresult = (event) => {
+                let newTranscript = '';
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    newTranscript = event.results[i][0].transcript;
+                    fullTranscript += newTranscript + '\n';
+                }
+                outputDiv.textContent = fullTranscript;
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech error:', event.error);
+                alert('エラー発生: ' + event.error);
+            };
+
+            document.getElementById('startBtn').onclick = () => {
+                recognition.start();
+                outputDiv.textContent = "🎤 Listening...\n" + fullTranscript;
+            };
+
+            document.getElementById('stopBtn').onclick = () => {
+                recognition.stop();
+                logDiv.textContent += "\n🛑 録音が停止されました";
+            };
+
+            document.getElementById('saveBtn').onclick = () => {
+                const blob = new Blob([fullTranscript], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "speech_transcript.txt";
+                a.click();
+                URL.revokeObjectURL(url);
+            };
+        }
+    </script>
 </body>
+
 </html>

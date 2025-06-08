@@ -3,36 +3,35 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>YOMIRU_basicにログインする</title>
+    <title>YOMIRU_studentにログインする</title>
     <link rel="stylesheet" href="../style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="login-container">
         <img src="../images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px">
         <div id="login-form">
-        <h2>YOMIRU_basicにログインする</h2>
-        <input type="email" id="email" placeholder="メールアドレス" required />
-        <input type="password" id="password" placeholder="パスワード" required />
-        <button id="loginBtn">Login→</button>
-        <p id="error" class="error"></p>
+            <h2>YOMIRU_studentにログインする</h2>
+            <input type="email" id="email" placeholder="メールアドレス" required />
+            <input type="password" id="password" placeholder="パスワード" required />
+            <button id="loginBtn">Login→</button>
+            <p id="error" class="error"></p>
         </div>
         <p>アカウントをお持ちでない方は<a href="../index.html#signup">こちら</a>から</p>
     </div>
-    <footer>2025 ©︎YOMIRU project All rights reserved.</footer>
 
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
 
     <script>
         const firebaseConfig = {
-            apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
-            authDomain: "yomiru-basic-1d8ed.firebaseapp.com",
-            projectId: "yomiru-basic-1d8ed",
-            storageBucket: "yomiru-basic-1d8ed.firebasestorage.app",
-            messagingSenderId: "732891232934",
-            appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
+            apiKey: "AIzaSyCMTU0NVPxs1TVJVReZhahjVJvyKLBjZjE",
+            authDomain: "yomiru-student.firebaseapp.com",
+            projectId: "yomiru-student",
+            storageBucket: "yomiru-student.firebasestorage.app",
+            messagingSenderId: "19694028330",
+            appId: "1:19694028330:web:931065608d98cf275a6553",
+            measurementId: "G-6D6X3LB9RM"
         };
 
         // Firebase 初期化
@@ -47,7 +46,7 @@
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     console.log("ログイン成功:", userCredential.user);
-                    window.location.href = "basic-main/basic-main.html";
+                    window.location.href = "student-main/student-main.html";
                 })
                 .catch((error) => {
                     document.getElementById("error").textContent = "エラー: " + error.message;
