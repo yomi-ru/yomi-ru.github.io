@@ -37,10 +37,15 @@
             let fullTranscript = '';
 
             recognition.onresult = (event) => {
-                let newTranscript = '';
                 for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    newTranscript = event.results[i][0].transcript;
-                    fullTranscript += newTranscript + '\n';
+                    const transcript = event.results[i][0].transcript.trim();
+
+                    if (event.results[i].isFinal) {
+                        fullTranscript += transcript + '\n';  // ✅ finalなら改行
+                    } else {
+                        // interim（途中のやつ）は一時的に表示するだけでもOK
+                        // もし使うなら temporaryTranscript += transcript;
+                    }
                 }
                 outputDiv.textContent = fullTranscript;
             };
