@@ -2,26 +2,27 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>YOMIRU_basicにログインする</title>
     <link rel="stylesheet" href="../style.css">
-    <title>YOMIRU_basicにログイン</title>
 </head>
 
 <body>
-    <div class="login-container" align="center">
-        <form id="login-form" style="text-align: center;">
-            <img src="../images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px">
-            <h2>YOMIRU_basicにログイン</h1>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Login→</button>
-        </form>
+    <div class="login-container">
+        <img src="../images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px">
+        <div id="login-form">
+        <h2>YOMIRU_basicにログインする</h2>
+        <input type="email" id="email" placeholder="メールアドレス" required />
+        <input type="password" id="password" placeholder="パスワード" required />
+        <button id="loginBtn">Login→</button>
+        <p id="error" class="error"></p>
+        </div>
         <p>アカウントをお持ちでない方は<a href="../index.html#signup">こちら</a>から</p>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
@@ -32,25 +33,22 @@
             appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
         };
 
-        const app = initializeApp(firebaseConfig);
+        // Firebase 初期化
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
 
-        const loginForm = document.getElementById('login-form');
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+        // ログインボタン押したときの処理
+        document.getElementById("loginBtn").addEventListener("click", () => {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-            firebase.auth().signInWithEmailAndPassword(email, password)
+            auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    console.log('Login successful:', user);
-                    window.location.href = 'basic-main/basic-main.html'; // Redirect to another page after login
+                    console.log("ログイン成功:", userCredential.user);
+                    window.location.href = "basic-main/basic-main.html";
                 })
                 .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.error('Error:', errorCode, errorMessage);
+                    document.getElementById("error").textContent = "エラー: " + error.message;
                 });
         });
     </script>
