@@ -8,6 +8,8 @@
     margin: 0 auto;
     padding: 0 auto;
     font-feature-settings: 'palt' 1;
+    font-family: "Zen Old Mincho", serif;
+    text-align: center;
 }
 
 body {
@@ -281,6 +283,59 @@ footer {
     background-color: #c1d0d4;
 }
 
+#login-form{
+    width: 90%;
+}
+
+#login-form img{
+    padding-top: 10vh;
+}
+
+#login-form h2 {
+    font-size: 36px;
+    padding: 20px;
+}
+
+#login-form input{
+    height: 50px;
+    font-size: 24px;
+    border-radius: 16px;
+    display: block;
+}
+
+#login-form button{
+    background-color: #c1d0d4;
+    color: #140f0e;
+    padding: 20px;
+    border-radius: 24px;
+    font-size: 24px;
+}
+
+#login-form button:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+}
+
+#loglin-form p{
+    font-size: 18px;
+    padding-top: 30px;
+}
+.login-container{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container p{
+    padding-top: 30px;
+}
+
+.login-container a{
+    color: #c1d0d4;
+    text-decoration: none;
+    border-bottom: 4px solid #c1d0d4;
+}
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
@@ -376,6 +431,9 @@ footer {
     .login_button_junbi{
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+    #login-form img{
+        width: 100%;
     }
     footer {
         font-size: 16px;
