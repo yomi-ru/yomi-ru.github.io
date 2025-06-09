@@ -373,7 +373,7 @@ footer {
     font-size: 24px;
 }
 
-.topimage{
+.topimage {
     width: 500px;
 }
 
@@ -476,7 +476,9 @@ footer {
 
     #login-form img,
     .basic-main img,
-    #login-form input {
+    #login-form input,
+    #email,
+    #password {
         width: 85%;
     }
 
