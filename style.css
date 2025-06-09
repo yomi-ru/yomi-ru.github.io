@@ -373,6 +373,10 @@ footer {
     font-size: 24px;
 }
 
+.topimage{
+    width: 500px;
+}
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
