@@ -475,7 +475,8 @@ footer {
     }
 
     #login-form img,
-    .basic-main img {
+    .basic-main img,
+    #login-form input {
         width: 85%;
     }
 
