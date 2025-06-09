@@ -499,4 +499,12 @@ footer {
     footer {
         font-size: 16px;
     }
+
+    .email,
+    .password{
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 20px;
+    }
 }
