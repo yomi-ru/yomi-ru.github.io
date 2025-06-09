@@ -91,8 +91,9 @@
             };
 
             document.getElementById('startBtn').onclick = () => {
+                fullTranscript = ''; // 認識結果リセット
+                outputDiv.textContent = "🎤 Listening...";
                 recognition.start();
-                outputDiv.textContent = "🎤 Listening...\n" + fullTranscript;
             };
 
             document.getElementById('stopBtn').onclick = () => {
