@@ -20,29 +20,7 @@
 </head>
 
 <body>
-    <script type="module">
-        // Firebaseのインポート（モジュール版）
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
-            authDomain: "yomiru-basic-1d8ed.firebaseapp.com",
-            projectId: "yomiru-basic-1d8ed",
-            storageBucket: "yomiru-basic-1d8ed.firebasestorage.app",
-            messagingSenderId: "732891232934",
-            appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-
-        onAuthStateChanged(auth, (user) => {
-            if (!user) {
-                window.location.href = "../basic-login.html";
-            }
-        });
-    </script>
+    <script type="module" src="basic-firebase.js"></script>
 
     <div class="basic-main">
         <img src="../../images/YOMIRU logo(photoshop) - 白黒反転.png" class="topimage">
@@ -56,62 +34,7 @@
         <footer>2025 ©︎YOMIRU project<br>All rights reserved.</footer>
     </div>
 
-    <script>
-        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-        if (!SpeechRecognition) {
-            alert("Web Speech API はこのブラウザで使えないよ😭 Chromeで開いてね！");
-        } else {
-            const recognition = new SpeechRecognition();
-            recognition.lang = 'en-US';
-            recognition.interimResults = false;
-            recognition.continuous = true;
-
-            let outputDiv = document.getElementById('output');
-            let logDiv = document.getElementById('log');
-            let fullTranscript = '';
-
-            recognition.onresult = (event) => {
-                for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    const transcript = event.results[i][0].transcript.trim();
-
-                    if (event.results[i].isFinal) {
-                        fullTranscript += transcript + '\n';
-                    } else {
-                        // interim（途中のやつ）は一時的に表示するだけでもOK
-                        // もし使うなら temporaryTranscript += transcript;
-                    }
-                }
-                outputDiv.textContent = fullTranscript;
-            };
-
-            recognition.onerror = (event) => {
-                console.error('Speech error:', event.error);
-                alert('エラー発生: ' + event.error);
-            };
-
-            document.getElementById('startBtn').onclick = () => {
-                fullTranscript = ''; // 認識結果リセット
-                outputDiv.textContent = "🎤 Listening...";
-                recognition.start();
-            };
-
-            document.getElementById('stopBtn').onclick = () => {
-                recognition.stop();
-                logDiv.textContent += "\n🛑 録音が停止されました";
-            };
-
-            document.getElementById('saveBtn').onclick = () => {
-                const blob = new Blob([fullTranscript], { type: "text/plain" });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = "speech_transcript.txt";
-                a.click();
-                URL.revokeObjectURL(url);
-            };
-        }
-    </script>
+    <script src="basic-script.js"></script>
 </body>
 
 </html>

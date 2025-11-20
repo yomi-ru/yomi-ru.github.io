@@ -70,33 +70,39 @@ p {
 }
 
 .menu {
-    position: sticky;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #c1d0d4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #c1d0d4;
+  box-shadow: 0 2px 4px rgba(0,0,0,.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0;
+  list-style: none;
 }
 
 .menu li {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
 }
 
 .menu li a {
-    color: #140f0e;
-    text-decoration: none;
-    border-bottom: 4px solid #c1d0d4;
-    font-weight: bold;
+  color: #140f0e;
+  text-decoration: none;
+  border-bottom: 4px solid #c1d0d4;
+  font-weight: bold;
 }
 
 .menu li a:hover {
-    color: #140f0e;
-    border-bottom: 4px solid #140f0e;
+  color: #140f0e;
+  border-bottom: 4px solid #140f0e;
 }
+
 
 .menu img {
     padding-top: 10px;
@@ -200,6 +206,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
     padding-right: 30px;
     padding-left: 30px;
+    padding-top: 30px;
     padding-bottom: 30px;
     width: 90%;
     height: 50vh;
@@ -217,12 +224,7 @@ h2 {
     border-spacing: 0;
 }
 
-.notice table th {
-    padding: 10px;
-    border: solid 2px #140f0e;
-    font-size: 20px;
-}
-
+.notice table th,
 .notice table td {
     padding: 10px;
     border: solid 2px #140f0e;
@@ -277,10 +279,40 @@ h2 {
 }
 
 footer {
+    text-align: left;
+    font-size: 16px;
+    padding-left: 20pz;
     margin-top: 24px;
     padding: 20px;
     color: #140f0e;
     background-color: #c1d0d4;
+}
+
+footer ul {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #140f0e;
+    text-decoration: none;
+    border-bottom: 2px solid #c1d0d4;
+}
+
+footer ul li a:hover {
+    color: #140f0e;
+    border-bottom: 2px solid #140f0e;
+}
+
+footer .sitemap{
+    margin-bottom: 30px;
 }
 
 #login-form {
@@ -289,11 +321,6 @@ footer {
 
 .login-container img {
     padding-top: 10vh;
-}
-
-#login-form h2 {
-    font-size: 36px;
-    padding: 20px;
 }
 
 #login-form input {
@@ -341,7 +368,9 @@ footer {
     padding-top: 10vh;
 }
 
-.basic-main h2 {
+.basic-main h2,
+#login-form h2,
+.basic-main button {
     font-size: 36px;
     padding: 20px;
 }
@@ -350,7 +379,6 @@ footer {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    font-size: 36px;
     padding: 10px;
 }
 
@@ -395,6 +423,10 @@ footer {
         width: 80%;
     }
 
+    .FirstView h1 {
+        font-size: 56px;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -418,7 +450,6 @@ footer {
 
     .card,
     .card_development {
-        width: 90%;
         margin-bottom: 20px;
     }
 
@@ -432,21 +463,14 @@ footer {
         font-size: 20px;
     }
 
-    .plan table {
+    .plan table,
+    .card,
+    .card_development {
         width: 90%;
-    }
-
-    .plan table th,
-    .plan table td {
-        font-size: 18px;
     }
 
     .plan h3 {
         font-size: 36px;
-    }
-
-    .plan p {
-        font-size: 18px;
     }
 
     .plancard {
@@ -461,7 +485,10 @@ footer {
     }
 
     .notice table th,
-    .notice table td {
+    .notice table td,
+    .plan p,
+    .plan table th,
+    .plan table td {
         font-size: 18px;
     }
 
@@ -501,7 +528,7 @@ footer {
     }
 
     .email,
-    .password{
+    .password {
         width: 80%;
         margin: 0 auto;
         padding: 10px;
