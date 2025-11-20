@@ -82,12 +82,12 @@ p {
     width: 100%;
     background-color: #c1d0d4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     margin: 0;
     list-style: none;
+    box-sizing: border-box;
 }
 
 .menu li {
