@@ -69,7 +69,12 @@ p {
     padding-bottom: 40px;
 }
 
+.sp_menu {
+    display: none;
+}
+
 .menu {
+    display: flex;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -433,18 +438,56 @@ footer .sitemap {
     }
 
     .menu {
+        display: none;
+    }
+
+    .sp_menu {
+        display: block;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         width: 100%;
+        background-color: #c1d0d4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
         padding-left: 0;
         padding-right: 0;
+        margin: 0;
+        list-style: none;
         box-sizing: border-box;
+        font-size: 30px;
     }
 
-    .menu li {
-        font-size: 24px;
+
+    .sp_menu a {
+        color: #140f0e;
+        text-decoration: none;
+        border-bottom: 4px solid #c1d0d4;
+        font-weight: bold;
+        display: block;
+        padding: 2px 0;
+        /* ←必要なら微調整してね */
     }
 
-    .menu img {
-        height: 25px;
+    .sp_menu br {
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sp_menu a:hover {
+        color: #140f0e;
+        border-bottom: 4px solid #140f0e;
+    }
+
+    .sp_menu img {
+        height: 40px;
     }
 
     .cards,
