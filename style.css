@@ -293,6 +293,10 @@ footer {
     background-color: #c1d0d4;
 }
 
+footer img{
+    padding-bottom: 10px;
+}
+
 footer ul {
     list-style: none;
     display: inline;
@@ -314,10 +318,6 @@ footer ul li a {
 footer ul li a:hover {
     color: #140f0e;
     border-bottom: 2px solid #140f0e;
-}
-
-footer .sitemap {
-    margin-bottom: 30px;
 }
 
 #login-form {
