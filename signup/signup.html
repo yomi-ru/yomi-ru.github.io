@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>YOMIRU_basicに登録する</title>
+    <meta name="description" content="YOMIRUは英語読み上げ算の読み手を育成するサービスです。音声認識や模範音声機能で読み手のスキル向上をサポートします。">
+    <meta name="keywords" content="YOMIRU,yomiru,読み上げ算,英語読み上げ算,そろばん,音声認識,模範音声,学習支援,教育テクノロジー,オンライン学習,読み手育成,そろばん教育">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="Twitter:site" content="@YOMIRU_official">
+    <meta name="twitter:title" content="YOMIRU">
+    <meta name="twitter:description" content="読みを、見る。">
+    <meta name="twitter:image" content="https://yomi-ru.github.io/images/YOMIRU%20logo%E9%80%8F%E9%81%8E.png">
+</head>
+
+<body>
+    <form id="registerForm">
+        <input type="email" id="email" placeholder="メールアドレス" required />
+        <input type="password" id="password" placeholder="パスワード" required />
+        <button type="submit">登録する</button>
+    </form>
+
+    <p id="error" class="error"></p>
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
+            authDomain: "yomiru-basic-1d8ed.firebaseapp.com",
+            projectId: "yomiru-basic-1d8ed",
+            storageBucket: "yomiru-basic-1d8ed.firebasestorage.app",
+            messagingSenderId: "732891232934",
+            appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        const form = document.getElementById("registerForm");
+        const errorEl = document.getElementById("error");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            errorEl.textContent = "";
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    console.log("ユーザ登録成功:", userCredential.user);
+                    alert("登録が完了しました。ログイン画面に遷移します。");
+                    window.location.href = "../YOMIRU_basic/basic-login.html";
+                })
+                .catch((error) => {
+                    console.error(error);
+                    errorEl.textContent = "エラー: " + error.message;
+                });
+        });
+    </script>
+</body>
+
+</html>
