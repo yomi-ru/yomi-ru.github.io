@@ -320,7 +320,8 @@ footer ul li a:hover {
     border-bottom: 2px solid #140f0e;
 }
 
-#login-form {
+#login-form,
+#signupForm {
     width: 90%;
 }
 
@@ -328,14 +329,16 @@ footer ul li a:hover {
     padding-top: 10vh;
 }
 
-#login-form input {
+#login-form input,
+#signupForm input {
     height: 50px;
     font-size: 24px;
     border-radius: 16px;
     display: block;
 }
 
-#login-form button {
+#login-form button,
+.signup-button {
     background-color: #c1d0d4;
     color: #140f0e;
     padding: 20px;
@@ -555,7 +558,8 @@ footer ul li a:hover {
     .basic-main img,
     #login-form input,
     #email,
-    #password {
+    #password,
+    #phone-number {
         width: 85%;
     }
 

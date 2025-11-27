@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -22,10 +22,12 @@
 </head>
 
 <body>
-    <form id="registerForm">
+    <h2>YOMIRU_basicに登録する</h2>
+    <form id="signupForm">
         <input type="email" id="email" placeholder="メールアドレス" required />
         <input type="password" id="password" placeholder="パスワード" required />
-        <button type="submit">登録する</button>
+        <input type="tel" id="phone-number" placeholder="電話番号" required/>
+        <button type="submit" class="signup-button">登録する</button>
     </form>
 
     <p id="error" class="error"></p>
@@ -33,42 +35,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
 
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
-            authDomain: "yomiru-basic-1d8ed.firebaseapp.com",
-            projectId: "yomiru-basic-1d8ed",
-            storageBucket: "yomiru-basic-1d8ed.firebasestorage.app",
-            messagingSenderId: "732891232934",
-            appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        const form = document.getElementById("registerForm");
-        const errorEl = document.getElementById("error");
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value;
-
-            errorEl.textContent = "";
-
-            auth.createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    console.log("ユーザ登録成功:", userCredential.user);
-                    alert("登録が完了しました。ログイン画面に遷移します。");
-                    window.location.href = "../YOMIRU_basic/basic-login.html";
-                })
-                .catch((error) => {
-                    console.error(error);
-                    errorEl.textContent = "エラー: " + error.message;
-                });
-        });
-    </script>
+    <script src="signupscript.js"></script>
 </body>
 
 </html>
