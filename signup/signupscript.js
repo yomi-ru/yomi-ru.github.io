@@ -10,7 +10,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
-const form = document.getElementById("registerForm");
+const form = document.getElementById("signupForm");
 const errorEl = document.getElementById("error");
 
 form.addEventListener("submit", (e) => {
