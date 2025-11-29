@@ -27,32 +27,55 @@
             <img src="../../images/YOMIRU logo(photoshop) - 白黒反転.png" class="topimage">
         </a>
         <h2>YOMIRU_basic</h2>
-        <button id="startBtn">▶</button>
-        <button id="stopBtn">⏹</button>
-        <button id="saveBtn">💾</button>
+        <!-- <div class="buttons">
+            <a href="basic-makequestion/makequestion.html" class="link_content" style="margin-top: 20px;">
+                問題を作成する
+            </a>
+        </div> -->
+        <div class="basic-layout">
 
-        <div id="output">認識したテキストが出力されます。</div>
-        <div id="log"></div>
+            <!-- <div class="problem-area">
+                <div class="json-load-area">
+                    <label for="jsonInput">問題JSONを読み込む：</label><br>
+                    <input type="file" id="jsonInput" accept="application/json">
+                </div>
+
+                <div id="problemView">
+                    問題JSONを読み込むとここに表示されます。
+                </div>
+            </div> -->
+
+            <div class="speech-area">
+                <button id="startBtn">▶</button>
+                <button id="stopBtn">⏹</button>
+                <button id="saveBtn">💾</button>
+
+                <div id="output">認識したテキストが出力されます。</div>
+                <div id="log"></div>
+            </div>
+
+        </div>
+
         <footer>
-        <img src="../../images/YOMIRU logo透過.png" width="150px" alt="YOMIRUのロゴ">
-        <br>
-        <ul class="sitemap">
-            <li><a href="../../index.html#about">YOMIRUとは?</a></li>
-            <li><a href="../../index.html#point">機能</a></li>
-            <li><a href="../../index.html#plan">プラン</a></li>
-            <li><a href="../../index.html#signup">お申し込み</a></li>
-            <li><a href="../../index.html#notice">お知らせ</a></li>
-            <li><a href="../../index.html#login">ログイン</a></li>
-        </ul>
-        <br>
-        <ul class="company">
-            <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
+            <img src="../../images/YOMIRU logo透過.png" width="150px" alt="YOMIRUのロゴ">
             <br>
-            <li>TEL.080-2081-9567</li>
+            <ul class="sitemap">
+                <li><a href="../../index.html#about">YOMIRUとは?</a></li>
+                <li><a href="../../index.html#point">機能</a></li>
+                <li><a href="../../index.html#plan">プラン</a></li>
+                <li><a href="../../index.html#signup">お申し込み</a></li>
+                <li><a href="../../index.html#notice">お知らせ</a></li>
+                <li><a href="../../index.html#login">ログイン</a></li>
+            </ul>
             <br>
-            <li>2025@YOMIRU_project all rights reserved.</li>
-        </ul>
-    </footer>
+            <ul class="company">
+                <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
+                <br>
+                <li>TEL.080-2081-9567</li>
+                <br>
+                <li>2025@YOMIRU_project all rights reserved.</li>
+            </ul>
+        </footer>
     </div>
 
     <script src="basic-script.js"></script>

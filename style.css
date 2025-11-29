@@ -25,7 +25,6 @@ body {
     font-size: 72px;
     letter-spacing: 0.1em;
     background-size: cover;
-    width: 100%;
     height: 100vh;
 }
 
@@ -51,7 +50,6 @@ h1 {
 
 .FirstView img {
     padding: 30px;
-    width: 100%;
     height: auto;
     max-width: 800px;
 }
@@ -79,7 +77,6 @@ p {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
     background-color: #c1d0d4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
     justify-content: space-between;
@@ -223,7 +220,6 @@ h2 {
 }
 
 .notice table {
-    width: 100%;
     text-align: center;
     border-collapse: collapse;
     border-spacing: 0;
@@ -356,7 +352,6 @@ footer ul li a:hover {
 }
 
 .login-container {
-    width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -422,6 +417,120 @@ footer ul li a:hover {
     margin-right: 20px;
 }
 
+.generator {
+    margin: 40px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.box-item {
+    margin: 10px 0;
+}
+
+.box-item input {
+    width: 200px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.basic-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto 0 auto;
+}
+
+.json-load-area {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#problemView {
+    min-height: 200px;
+    max-height: 50vh;
+    overflow-y: auto;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.problem-column {
+    display: inline-flex;
+    flex-direction: column;
+    border: 3px solid #c1d0d4;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.problem-column-numbers {
+    padding: 10px 20px;
+}
+
+.problem-column-number {
+    font-size: 28px;
+    line-height: 1.4;
+    margin: 4px 0;
+}
+
+.problem-column-sum {
+    border-top: 3px solid #c1d0d4;
+    padding: 6px 20px 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.problem-boxes {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.problem-box {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 2px solid #c1d0d4;
+    font-size: 24px;
+}
+
+.problem-sum {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.basic-layout.layout-active {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.basic-layout.layout-active .problem-area,
+.basic-layout.layout-active .speech-area {
+    width: 50%;
+}
+
+.basic-main #output,
+.FirstView,
+.FirstView img,
+#problemView,
+.menu,
+.notice table,
+.login-container,
+.problem-area,
+.speech-area {
+    width: 100%;
+}
+
+
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
@@ -459,7 +568,6 @@ footer ul li a:hover {
         position: sticky;
         top: 0;
         z-index: 1000;
-        width: 100%;
         background-color: #c1d0d4;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
         display: flex;
@@ -484,7 +592,6 @@ footer ul li a:hover {
         font-weight: bold;
         display: block;
         padding: 2px 0;
-        /* ←必要なら微調整してね */
     }
 
     .sp_menu br {
@@ -573,10 +680,6 @@ footer ul li a:hover {
         width: 85%;
     }
 
-    .basic-main {
-        width: 100%;
-    }
-
     .basic-main button {
         width: 100px;
         height: 100px;
@@ -597,6 +700,44 @@ footer ul li a:hover {
         margin: 0 auto;
         padding: 10px;
         font-size: 20px;
+    }
+
+    /* スマホは縦並び固定 */
+    .basic-layout,
+    .basic-layout.layout-active {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* 左右エリアは全幅 */
+    .problem-area,
+    .speech-area {
+        width: 85%;
+    }
+
+    /* 問題だけ自前でスクロール */
+    #problemView {
+        max-height: 40vh;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .speech-area #output {
+        height: 50vh;
+        overflow-y: auto;
+        width: 85%;
+    }
+
+    .speech-area {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .problem-column {
+        max-width: 100%;
+        word-break: break-all;
     }
 }
 
