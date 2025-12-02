@@ -19,7 +19,7 @@ if (!SpeechRecognition) {
             if (event.results[i].isFinal) {
                 fullTranscript += transcript + '\n';
             } else {
-                // interim（途中のやつ）は一時的に表示するだけでもOK
+                // interim（途中のやつ）は一時的に表示するだけでも
                 // もし使うなら temporaryTranscript += transcript;
             }
         }
@@ -77,7 +77,7 @@ if (jsonInput && problemView) {
                 const data = JSON.parse(e.target.result);
 
                 if (!Array.isArray(data.nums)) {
-                    alert("このJSONには nums 配列が見つからないよ…🥺");
+                    alert("このJSONには nums 配列が見つかりません");
                     return;
                 }
 
@@ -85,7 +85,7 @@ if (jsonInput && problemView) {
                 alert("問題JSONを読み込みました✨");
             } catch (err) {
                 console.error(err);
-                alert("JSONの形式がおかしいかも…確認してみて💦");
+                alert("JSONの形式にエラーがあります");
             }
         };
         reader.readAsText(file, "utf-8");
@@ -96,17 +96,11 @@ function renderProblemsFromJson(data) {
         basicLayout.classList.add("layout-active");
     }
     problemView.innerHTML = "";
-
-    // タイトル
     const titleEl = document.createElement("h3");
     titleEl.textContent = data.title || "問題";
     problemView.appendChild(titleEl);
-
-    // 1本の縦の箱
     const column = document.createElement("div");
     column.className = "problem-column";
-
-    // 上：数字を縦に並べる部分
     const numsWrapper = document.createElement("div");
     numsWrapper.className = "problem-column-numbers";
 
@@ -116,18 +110,13 @@ function renderProblemsFromJson(data) {
         numEl.textContent = num;
         numsWrapper.appendChild(numEl);
     });
-
-    // 下：合計
     let total = data.sum;
     if (typeof total !== "number") {
         total = data.nums.reduce((a, b) => a + b, 0);
     }
-
     const sumEl = document.createElement("div");
     sumEl.className = "problem-column-sum";
-    sumEl.textContent = total;  // 画像みたいに数字だけにしてる
-
-    // 組み立て
+    sumEl.textContent = total;
     column.appendChild(numsWrapper);
     column.appendChild(sumEl);
     problemView.appendChild(column);

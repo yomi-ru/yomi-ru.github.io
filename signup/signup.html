@@ -26,7 +26,10 @@
     <form id="signupForm">
         <input type="email" id="email" placeholder="メールアドレス" required />
         <input type="password" id="password" placeholder="パスワード" required />
-        <input type="tel" id="phone-number" placeholder="電話番号" required/>
+        <div id="password-strength-bar">
+            <div id="password-strength-fill"></div>
+        </div>
+        <input type="tel" id="phone-number" placeholder="電話番号" required />
         <button type="submit" class="signup-button">登録する</button>
     </form>
 

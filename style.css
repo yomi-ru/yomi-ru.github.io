@@ -105,7 +105,6 @@ p {
     border-bottom: 4px solid #140f0e;
 }
 
-
 .menu img {
     padding-top: 10px;
     height: 30px;
@@ -150,7 +149,6 @@ h2 {
 
 .card p,
 .card_development p {
-
     font-size: 24px;
 }
 
@@ -205,7 +203,7 @@ h2 {
     background-color: #c1d0d4;
     color: #140f0e;
     border-radius: 24px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 30px;
@@ -331,6 +329,28 @@ footer ul li a:hover {
     font-size: 24px;
     border-radius: 16px;
     display: block;
+}
+
+#signupForm input {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#password-strength-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    margin: 6px auto 10px auto;
+    overflow: hidden;
+}
+
+#password-strength-fill {
+    height: 100%;
+    width: 0%;
+    transform-origin: left;
+    transition: width 0.4s ease, background-color 0.3s ease;
 }
 
 #login-form button,
@@ -529,8 +549,6 @@ footer ul li a:hover {
     width: 100%;
 }
 
-
-
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
@@ -583,7 +601,6 @@ footer ul li a:hover {
         box-sizing: border-box;
         font-size: 30px;
     }
-
 
     .sp_menu a {
         color: #140f0e;
@@ -702,7 +719,6 @@ footer ul li a:hover {
         font-size: 20px;
     }
 
-    /* スマホは縦並び固定 */
     .basic-layout,
     .basic-layout.layout-active {
         flex-direction: column;
@@ -711,13 +727,12 @@ footer ul li a:hover {
         width: 100%;
     }
 
-    /* 左右エリアは全幅 */
     .problem-area,
-    .speech-area {
+    .speech-area,
+    #password-strength-bar {
         width: 85%;
     }
 
-    /* 問題だけ自前でスクロール */
     #problemView {
         max-height: 40vh;
         overflow-y: auto;
