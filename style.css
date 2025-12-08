@@ -119,7 +119,8 @@ h2 {
 .cards,
 .plans,
 .buttons,
-.links {
+.links,
+.box-doc-wrap {
     display: flex;
 }
 
@@ -240,6 +241,15 @@ h2 {
     color: #c1d0d4;
     text-decoration: none;
     border-bottom: 4px solid #c1d0d4;
+}
+
+.box-doc-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 400px;
 }
 
 #nextButton,
@@ -693,7 +703,8 @@ footer ul li a:hover {
     #login-form input,
     #email,
     #password,
-    #phone-number {
+    #phone-number,
+    .box-doc-wrap {
         width: 85%;
     }
 

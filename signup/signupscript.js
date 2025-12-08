@@ -109,3 +109,14 @@ form.addEventListener("submit", (e) => {
             alert("エラー: " + error.message);
         });
 });
+
+function showNextButton() {
+    const checkbox = document.getElementById("initialButton");
+    const button = document.getElementById("nextButton");
+
+    if (checkbox.checked) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}

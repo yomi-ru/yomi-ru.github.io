@@ -1,6 +1,3 @@
-function showNextButton() {
-    document.getElementById("nextButton").style.display = "block";
-}
 const targets = document.getElementsByClassName('fade');
 for (let i = targets.length; i--;) {
     let observer = new IntersectionObserver((entries, observer) => {
