@@ -477,8 +477,8 @@ footer ul li a:hover {
 }
 
 #problemView {
-    min-height: 200px;
-    max-height: 50vh;
+    padding-bottom: 30px;
+    /* max-height: 50vh; */
     overflow-y: auto;
     border: none;
     padding: 10px;
