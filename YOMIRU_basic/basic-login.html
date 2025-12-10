@@ -9,7 +9,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <title>YOMIRU_basicにログインする</title>
-    <meta name="description" content="YOMIRUは英語読み上げ算の読み手を育成するサービスです。音声認識や模範音声機能で読み手のスキル向上をサポートします。このページはYOMIRU_basicのログインページです。">
+    <meta name="description"
+        content="YOMIRUは英語読み上げ算の読み手を育成するサービスです。音声認識や模範音声機能で読み手のスキル向上をサポートします。このページはYOMIRU_basicのログインページです。">
     <meta name="keywords" content="YOMIRU,yomiru,読み上げ算,英語読み上げ算,そろばん,音声認識,模範音声,学習支援,教育テクノロジー,オンライン学習,読み手育成,そろばん教育">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,17 +80,22 @@
             appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
         };
 
-        // Firebase 初期化
-        firebase.initializeApp(firebaseConfig);
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
         const auth = firebase.auth();
 
-        // ★ Google プロバイダ
         const provider = new firebase.auth.GoogleAuthProvider();
 
         // メール＋パスワード ログイン
         document.getElementById("loginBtn").addEventListener("click", () => {
-            const email = document.getElementById("email").value;
+            const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value;
+            const errorEl = document.getElementById("error");
+
+            errorEl.textContent = "";
+
+            console.log("try login with:", email);
 
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
@@ -97,26 +103,31 @@
                     window.location.href = "basic-main/basic-main.html";
                 })
                 .catch((error) => {
-                    document.getElementById("error").textContent = "エラー: " + error.message;
+                    console.log("error.code:", error.code);
+                    console.log("error.message:", error.message);
+                    errorEl.textContent = "エラー: " + error.message;
                 });
         });
 
-        // ★ Googleログイン
+        // Googleログイン
         document.getElementById("googleLoginBtn").addEventListener("click", () => {
+            const errorEl = document.getElementById("error");
+            errorEl.textContent = "";
+
             auth.signInWithPopup(provider)
                 .then((result) => {
                     console.log("Googleログイン成功:", result.user);
                     window.location.href = "basic-main/basic-main.html";
                 })
                 .catch((error) => {
-                    console.error("ログインエラー:", error);
-                    document.getElementById("error").textContent = "エラー: " + error.message;
+                    console.error("Googleログインエラー:", error);
+                    errorEl.textContent = "エラー: " + error.message;
                 });
         });
 
         auth.onAuthStateChanged((user) => {
             if (user) {
-                console.log("ログイン済み:", user);
+                console.log("ログイン済み:", user.email || user.uid);
             }
         });
     </script>
