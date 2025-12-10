@@ -219,7 +219,7 @@ h2 {
 }
 
 .notice table {
-    text-align: center;
+    text-align: left;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -237,12 +237,6 @@ h2 {
     border-bottom: 2px solid #140f0e;
 }
 
-.signup a {
-    color: #c1d0d4;
-    text-decoration: none;
-    border-bottom: 4px solid #c1d0d4;
-}
-
 .box-doc-wrap {
     display: flex;
     justify-content: center;
@@ -252,10 +246,22 @@ h2 {
     max-width: 400px;
 }
 
+.signup p{
+    padding: 0;;
+}
+
+.signup a {
+    color: #c1d0d4;
+    text-decoration: none;
+    border-bottom: 4px solid #c1d0d4;
+}
+
 #nextButton,
 .call,
 .login_button,
-.link_content {
+.link_content,
+.signup-button,
+#login-form button{
     text-align: center;
     color: #140f0e;
     text-decoration: none;
@@ -361,15 +367,6 @@ footer ul li a:hover {
     width: 0%;
     transform-origin: left;
     transition: width 0.4s ease, background-color 0.3s ease;
-}
-
-#login-form button,
-.signup-button {
-    background-color: #c1d0d4;
-    color: #140f0e;
-    padding: 20px;
-    border-radius: 24px;
-    font-size: 24px;
 }
 
 #login-form button:hover {
