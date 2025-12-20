@@ -1,0 +1,24 @@
+{
+    "level": 2,
+    "title": "2桁",
+    "items": [
+      {
+        "id": "2D-01",
+        "audio": "../../audio/2_digit_add_sub.mp3",
+        "answers": ["45"],
+        "problem": {
+          "nums": [95, 16, 17, -92, 41],
+          "sum": 45
+        }
+      },
+      {
+        "id": "2D-02",
+        "audio": "../../audio/2_digit_add_sub2.mp3",
+        "answers": ["135"],
+        "problem": {
+          "nums": [68, -44, 53, -19, 77],
+          "sum": 135
+        }
+      }
+    ]
+  }

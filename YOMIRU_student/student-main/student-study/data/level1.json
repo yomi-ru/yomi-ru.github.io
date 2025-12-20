@@ -1,0 +1,24 @@
+{
+    "level": 1,
+    "title": "1桁",
+    "items": [
+      {
+        "id": "1D-01",
+        "audio": "../../audio/1_digit_add_sub.mp3",
+        "answers": ["16"],
+        "problem": {
+          "nums": [5, 1, -3, 5, 8],
+          "sum": 16
+        }
+      },
+      {
+        "id": "1D-02",
+        "audio": "../../audio/1_digit_addition.mp3",
+        "answers": ["30"],
+        "problem": {
+          "nums": [2, 6, 5, 8, 9],
+          "sum": 30
+        }
+      }
+    ]
+  }

@@ -72,7 +72,7 @@ p {
 }
 
 .menu,
-.student_menu{
+.student_menu {
     display: flex;
     position: -webkit-sticky;
     position: sticky;
@@ -124,7 +124,8 @@ p {
     border-bottom: 4px solid #140f0e;
 }
 
-.menu img {
+.menu img,
+.student_menu img {
     padding-top: 10px;
     height: 30px;
 }
@@ -141,6 +142,10 @@ h2 {
 .links,
 .box-doc-wrap {
     display: flex;
+}
+
+.problemLv .cards {
+    padding: 30px;
 }
 
 .card {
@@ -265,8 +270,9 @@ h2 {
     max-width: 400px;
 }
 
-.signup p{
-    padding: 0;;
+.signup p {
+    padding: 0;
+    ;
 }
 
 .signup a {
@@ -280,7 +286,7 @@ h2 {
 .login_button,
 .link_content,
 .signup-button,
-#login-form button{
+#login-form button {
     text-align: center;
     color: #140f0e;
     text-decoration: none;
@@ -465,6 +471,13 @@ footer ul li a:hover {
     margin-right: 20px;
 }
 
+.dashboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
 .generator {
     margin: 40px auto;
     width: 90%;
@@ -553,6 +566,37 @@ footer ul li a:hover {
     font-weight: bold;
 }
 
+/* 先生モードの縦表示（添付の見た目寄せ） */
+.teacher-problem {
+    background: #0f0f12;
+    border: 4px solid #c1d0d4;
+    border-radius: 10px;
+    padding: 18px 18px 14px;
+}
+
+.teacher-nums {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.teacher-line {
+    height: 4px;
+    background: #c1d0d4;
+    margin: 18px 0 14px;
+}
+
+.teacher-sum {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
 .basic-layout.layout-active {
     flex-direction: row;
     justify-content: center;
@@ -570,7 +614,7 @@ footer ul li a:hover {
 .FirstView img,
 #problemView,
 .menu,
-.notice table,
+.student_menu .notice table,
 .login-container,
 .problem-area,
 .speech-area {
@@ -771,7 +815,7 @@ footer ul li a:hover {
         overflow-x: scroll;
         width: 100%;
         max-width: 100%;
-        min-width: 0;  
+        min-width: 0;
     }
 
     .speech-area #output {
