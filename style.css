@@ -71,7 +71,8 @@ p {
     display: none;
 }
 
-.menu {
+.menu,
+.student_menu{
     display: flex;
     position: -webkit-sticky;
     position: sticky;
@@ -87,20 +88,38 @@ p {
     box-sizing: border-box;
 }
 
-.menu li {
+.menu li,
+.student_menu li {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 30px;
 }
 
-.menu li a {
+.menu li a,
+.student_menu li a {
     color: #140f0e;
     text-decoration: none;
     border-bottom: 4px solid #c1d0d4;
     font-weight: bold;
 }
 
-.menu li a:hover {
+.menu li a:hover,
+.student_menu li a:hover {
+    color: #140f0e;
+    border-bottom: 4px solid #140f0e;
+}
+
+.student_menu li button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #140f0e;
+    text-decoration: none;
+    border-bottom: 4px solid #c1d0d4;
+    font-weight: bold;
+}
+
+.student_menu li button:hover {
     color: #140f0e;
     border-bottom: 4px solid #140f0e;
 }
