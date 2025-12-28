@@ -51,13 +51,13 @@
     if (path.includes("/1digit/")) return 1;
     if (path.includes("/2digit/")) return 2;
     if (path.includes("/3digit/")) return 3;
-    if (path.includes("/7to13digit/")) return 4;
+    if (path.includes("/7to13digit/")) return 713;
 
     // ファイル名から推定（保険）
     if (path.includes("1digit.html")) return 1;
     if (path.includes("2digit.html")) return 2;
     if (path.includes("3digit.html")) return 3;
-    if (path.includes("7to13digit.html")) return 4;
+    if (path.includes("7to13digit.html")) return 713;
 
     return 1; // 最後の保険
   }
