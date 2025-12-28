@@ -18,7 +18,7 @@ const LEVELS = [
       href: "../levels/3digit/3digit.html"
     },
     {
-      id: 4,
+      id: 713,
       name: "7-13桁",
       desc: "全国大会上位レベルの読み上げ算。",
       href: "../levels/7to13digit/7to13digit.html"

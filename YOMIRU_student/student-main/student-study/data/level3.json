@@ -3,8 +3,8 @@
     "title": "3桁",
     "items": [
       {
-        "id": "3D-01",
-        "audio": "../../audio/3_digit_add_sub.mp3",
+        "id": "AS31",
+        "audio": "../../audio/AS3-1.mp3",
         "answers": ["1710"],
         "problem": {
           "nums": [263, 924, 284, -423, 662],
@@ -12,8 +12,8 @@
         }
       },
       {
-        "id": "3D-02",
-        "audio": "../../audio/3_digit_add_sub2.mp3",
+        "id": "AS32",
+        "audio": "../../audio/AS3-2.mp3",
         "answers": ["1716"],
         "problem": {
           "nums": [858, -611, 857, 226, 386],
@@ -21,8 +21,8 @@
         }
       },
       {
-        "id": "3D-03",
-        "audio": "../../audio/3_digit_add_sub3.mp3",
+        "id": "AS33",
+        "audio": "../../audio/AS3-3.mp3",
         "answers": ["1105"],
         "problem": {
           "nums": [337, -295, 518, -298, 843],
