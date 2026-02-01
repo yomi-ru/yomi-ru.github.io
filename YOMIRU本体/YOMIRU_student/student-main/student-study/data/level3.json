@@ -1,0 +1,33 @@
+{
+    "level": 3,
+    "title": "3桁",
+    "items": [
+      {
+        "id": "AS31",
+        "audio": "../../audio/AS3-1.mp3",
+        "answers": ["1710"],
+        "problem": {
+          "nums": [263, 924, 284, -423, 662],
+          "sum": 1710
+        }
+      },
+      {
+        "id": "AS32",
+        "audio": "../../audio/AS3-2.mp3",
+        "answers": ["1716"],
+        "problem": {
+          "nums": [858, -611, 857, 226, 386],
+          "sum": 1716
+        }
+      },
+      {
+        "id": "AS33",
+        "audio": "../../audio/AS3-3.mp3",
+        "answers": ["1105"],
+        "problem": {
+          "nums": [337, -295, 518, -298, 843],
+          "sum": 1105
+        }
+      }
+    ]
+  }

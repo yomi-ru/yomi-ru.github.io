@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>STUDY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="Twitter:site" content="@YOMIRU_official">
+    <meta name="twitter:title" content="YOMIRU">
+    <meta name="twitter:description" content="読みを、見る。">
+    <meta name="twitter:image" content="https://yomi-ru.github.io/images/YOMIRU%20logo%E9%80%8F%E9%81%8E.png">
+</head>
+
+<body>
+    <script src="../student-firebase.js" type="module"></script>
+    <header>
+        <ul class="student_menu" id="menu">
+            <li><a href="../../student-main.html">HOME</a></li>
+            <li><a href="../student-try/student-try-main.html">TRY</a></li>
+            <li><button onclick="logout()"><a href="../../../../index.html">ログアウト</a></button></li>
+        </ul>
+    </header>
+
+        <h2>レベル選択</h2>
+        <p>レベルを選んでください。</p>
+
+        <div class="problemLv">
+        <div id="cards">
+            <div class="card" onclick="location.href='student-study-level1.html'">
+                <h3>1桁</h3>
+                <p>まずは英語読み上げ算を学んでみましょう。</p>
+            </div>
+            <div class="card" onclick="location.href='student-study-level2.html'">
+                <h3>2桁</h3>
+                <p>1桁が簡単すぎるように感じたらここに進みましょう。</p>
+            </div>
+            <div class="card" onclick="location.href='student-study-level3.html'">
+                <h3>3桁</h3>
+                <p>初級の問題の中でも難しめの問題を用意しました。</p>
+            </div>
+        </div>
+
+        <script src="dashboard.js"></script>
+    </body>
+
+</html>

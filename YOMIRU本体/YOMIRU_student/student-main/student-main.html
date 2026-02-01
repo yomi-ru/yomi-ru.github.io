@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>HOME</title>
+    <meta name="description" content="YOMIRUは英語読み上げ算の読み手を育成するサービスです。音声認識や模範音声機能で読み手のスキル向上をサポートします。">
+    <meta name="keywords" content="YOMIRU,yomiru,読み上げ算,英語読み上げ算,そろばん,音声認識,模範音声,学習支援,教育テクノロジー,オンライン学習,読み手育成,そろばん教育">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="Twitter:site" content="@YOMIRU_official">
+    <meta name="twitter:title" content="YOMIRU">
+    <meta name="twitter:description" content="読みを、見る。">
+    <meta name="twitter:image" content="https://yomi-ru.github.io/images/YOMIRU%20logo%E9%80%8F%E9%81%8E.png">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <ul class="student_menu" id="menu">
+            <!-- <li><img src="../../images/YOMIRU-logo-blackbase.png" alt="YOMIRUのロゴ"></li> -->
+            <!-- <li><a href="#about">YOMIRUとは?</a></li> -->
+            <li><a href="student-study/dashboard/student-study-main.html">STUDY</a></li>
+            <li><a href="student-try/student-try-main.html">TRY</a></li>
+            <li><button onclick="logout()"><a href="../../index.html">ログアウト</a></button></li>
+        </ul>
+    </header>
+    <h2>練習へアクセス</h2>
+    <div class="student-dashboard">
+        <a href="student-study/dashboard/student-study-main.html" class="login_button">STUDY</a>
+        <a href="student-try/student-try-main.html" class="login_button">TRY</a>
+    </div>
+    <div class="description" style="width: 90%;">
+        <h2>STUDYモードとは？</h2>
+        <p>STUDYモードでは、全国トップレベルの先生が読んだ珠玉の音声をそのまま配信する機能です。<br>
+            クイズ形式にも、音声データベース形式にもでき、先生は読みの研究にも、生徒は練習にも活用できます。</p>
+        <h2>TRYモードとは？</h2>
+        <p>TRYモードでは、音声認識で読みの正確さをチェックする機能。読み手としてのスキルアップを目指します。</p>
+    </div>
+    <footer>
+        <img src="../../images/YOMIRU-logo-blackbase.png" width="150px" alt="YOMIRUのロゴ">
+        <br>
+        <ul class="sitemap">
+            <li><a href="../../index.html#about">YOMIRUとは?</a></li>
+            <li><a href="../../index.html#point">機能</a></li>
+            <li><a href="../../index.html#plan">プラン</a></li>
+            <li><a href="../../index.html#signup">お申し込み</a></li>
+            <li><a href="../../index.html#notice">お知らせ</a></li>
+            <li><a href="../../index.html#login">ログイン</a></li>
+        </ul>
+        <br>
+        <ul class="company">
+            <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
+            <br>
+            <li>TEL.080-2081-9567</li>
+            <br>
+            <li>(C) 2025 YOMIRU_project, All Rights Reserved.</li>
+        </ul>
+    </footer>
+    <script src="student-firebase.js"></script>
+</body>
+
+</html>
+
+<!-- 594f4d4952552070726f6a6563740a6d61646520627920e69d89e69cace79bb4e7b6990ae89197e4bd9ce6a8a9e381afe4bf9de8adb7e38195e3828ce381a6e38184e381bee38199e38082 -->

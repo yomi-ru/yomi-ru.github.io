@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>YOMIRU_basic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="Twitter:site" content="@YOMIRU_official">
+    <meta name="twitter:title" content="YOMIRU">
+    <meta name="twitter:description" content="読みを、見る。">
+    <meta name="twitter:image" content="https://yomi-ru.github.io/images/YOMIRU%20logo%E9%80%8F%E9%81%8E.png">
+</head>
+
+<body>
+    <script type="module" src="basic-firebase.js"></script>
+
+    <div class="basic-main">
+        <a href="../../index.html" style="border-bottom: none;">
+            <img src="../../images/YOMIRU-logo-whitebase.png" class="topimage">
+        </a>
+        <h2>YOMIRU_basic</h2>
+        <!-- <div class="buttons">
+            <a href="basic-makequestion/makequestion.html" class="link_content" style="margin-top: 20px;">
+                問題を作成する
+            </a>
+        </div> -->
+        <div class="basic-layout">
+
+            <!-- <div class="problem-area">
+                <div class="json-load-area">
+                    <label for="jsonInput">問題JSONを読み込む：</label><br>
+                    <input type="file" id="jsonInput" accept="application/json">
+                </div>
+
+                <div id="problemView">
+                    問題JSONを読み込むとここに表示されます。
+                </div>
+            </div> -->
+
+            <div class="speech-area">
+                <button id="startBtn">▶</button>
+                <button id="stopBtn">⏹</button>
+                <button id="saveBtn">💾</button>
+
+                <div id="output">認識したテキストが出力されます。</div>
+                <div id="log"></div>
+            </div>
+
+        </div>
+
+        <footer>
+            <img src="../../images/YOMIRU-logo-blackbase.png" width="150px" alt="YOMIRUのロゴ">
+            <br>
+            <ul class="sitemap">
+                <li><a href="../../index.html#about">YOMIRUとは?</a></li>
+                <li><a href="../../index.html#point">機能</a></li>
+                <li><a href="../../index.html#plan">プラン</a></li>
+                <li><a href="../../index.html#signup">お申し込み</a></li>
+                <li><a href="../../index.html#notice">お知らせ</a></li>
+                <li><a href="../../index.html#login">ログイン</a></li>
+            </ul>
+            <br>
+            <ul class="company">
+                <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
+                <br>
+                <li>TEL.080-2081-9567</li>
+                <br>
+                <li>(C) 2025 YOMIRU_project, All Rights Reserved.</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="basic-script.js"></script>
+</body>
+
+</html>
+
+<!-- 594f4d4952552070726f6a6563740a6d61646520627920e69d89e69cace79bb4e7b6990ae89197e4bd9ce6a8a9e381afe4bf9de8adb7e38195e3828ce381a6e38184e381bee38199e38082 -->
