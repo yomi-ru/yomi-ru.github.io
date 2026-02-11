@@ -258,15 +258,16 @@ p {
 .notice {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #c1d0d4;
-    color: #140f0e;
+    /* background-color: #c1d0d4;
+    color: #140f0e; */
+    border: 1px solid #c1d0d4;
     border-radius: 24px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
+    /* box-shadow: 0 2px 4px rgba(255, 255, 255, 0.7); */
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
-    width: 90%;
+    width: 60%;
     height: 50vh;
     overflow-y: scroll;
 }
@@ -284,15 +285,22 @@ p {
 .notice table th,
 .notice table td {
     padding: 10px;
-    border: solid 2px #140f0e;
+    /* border: solid 2px #140f0e; */
     font-size: 20px;
 }
 
 .notice table a,
 #nextButton a{
-    color: #140f0e;
+    color: #c1d0d4;
     text-decoration: none;
-    border-bottom: 2px solid #140f0e;
+    border-bottom: 2px solid #c1d0d4;
+}
+
+.notice table a:hover,
+#nextButton a:hover{
+    color: #c1d0d4;
+    text-decoration: none;
+    border-bottom: none;
 }
 
 .box-doc-wrap {
