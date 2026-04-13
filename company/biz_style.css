@@ -9,15 +9,76 @@
     padding: 0 auto;
     font-feature-settings: 'palt' 1;
     font-family: "Zen Old Mincho", serif;
-    background-color: #c1d0d4;
-    color: #140f0e;
     text-align: center;
 }
 
-.FV {
-    padding-top: 25vh;
+body{
+    background-color: #c8d5d9;
+    color: #140f0e;
+}
+
+.PC_font {
+    display: block;
+}
+
+.smartphone_font {
+    display: none;
+}
+
+.menu{
     width: 100%;
-    height: 100vh;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2{
+    font-size: 48px;
+    padding-top: 72px;
+    padding-bottom: 30px;
+}
+
+h3{
+    font-size: 36px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+p{
+    font-size: 24px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.card {
+    background-color: #140f0e;
+    color: #c1d0d4;
+    width: 30%;
+    height: 200px;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card_development {
+    background-color: #999;
+    width: 30%;
+    height: 200px;
+    color: #140f0e;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.FV {
+    padding-top: 40vh;
+    width: 100%;
+    height: 60vh;
 }
 
 .FV img {
@@ -25,6 +86,169 @@
     padding-right: 5px;
 }
 
-.FV h1 {
-    font-size: 72px;
+.FV p{
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.FirstView .fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 3s, transform 1.5s;
+}
+
+.FirstView .fade.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.sp_menu {
+    display: none;
+}
+
+.menu,
+.student_menu {
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #140f0e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.menu li,
+.student_menu li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+.menu li a,
+.student_menu li a {
+    color: #c1d0d4;
+    text-decoration: none;
+    border-bottom: 4px solid #140f0e;
+    font-weight: bold;
+}
+
+.menu li a:hover,
+.student_menu li a:hover {
+    color: #c1d0d4;
+    border-bottom: 4px solid #c1d0d4;
+}
+
+.student_menu li button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #c1d0d4;
+    text-decoration: none;
+    border-bottom: 4px solid #140f0e;
+    font-weight: bold;
+}
+
+.student_menu li button:hover {
+    color: #c1d0d4;
+    border-bottom: 4px solid #c1d0d4;
+}
+
+.menu img,
+.student_menu img {
+    padding-top: 10px;
+    height: 30px;
+}
+
+@media all and (max-width:920px) {
+    body {
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+
+    .PC_font {
+        display: none;
+    }
+
+    .smartphone_font {
+        display: block;
+    }
+
+    .FV{
+        padding-top: 30vh;
+        height: 70vh;
+    }
+
+    .FV img {
+        height: 52px;
+    }
+
+    .FV h1 {
+        font-size: 52px;
+    }
+
+    .FV p{
+        font-size: 20px;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .sp_menu {
+        display: block;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #140f0e;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-size: 30px;
+    }
+
+    .sp_menu a {
+        color: #c1d0d4;
+        text-decoration: none;
+        border-bottom: 4px solid #140f0e;
+        font-weight: bold;
+        display: block;
+        padding: 2px 0;
+    }
+
+    .sp_menu br {
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sp_menu a:hover {
+        color: #c1d0d4;
+        border-bottom: 4px solid #c1d0d4;
+    }
+
+    .sp_menu img {
+        height: 40px;
+    }
 }
