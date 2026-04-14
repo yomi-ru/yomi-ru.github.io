@@ -22,36 +22,59 @@
 </head>
 
 <body>
-    <div class="login-container">
-        <img src="../images/YOMIRU-logo-whitebase.png" width="500px">
-        <div id="login-form">
-            <h2>YOMIRU_studentにログインする</h2>
-            <input type="email" id="email" placeholder="メールアドレス" required />
-            <input type="password" id="password" placeholder="パスワード" required />
-            <button id="loginBtn">Login→</button>
-            <p id="error" class="error"></p>
+    <main class="auth-shell">
+        <div class="auth-panel login-container">
+            <a href="../index.html" class="auth-logo-link">
+                <img src="../images/YOMIRU-logo-whitebase.png" class="topimage auth-logo" alt="YOMIRUのロゴ">
+            </a>
+            <div class="auth-copy">
+                <h2>YOMIRU_studentに<br>ログインする</h2>
+            </div>
+            <div id="login-form" class="auth-form">
+                <input type="email" id="email" placeholder="メールアドレス" required />
+                <input type="password" id="password" placeholder="パスワード" required />
+                <button id="loginBtn">Login→</button>
+                <p id="error" class="error auth-error"></p>
+            </div>
         </div>
-        <p>アカウントをお持ちでない方は<a href="../index.html#signup">こちら</a>から</p>
-    </div>
+    </main>
     <footer>
-        <img src="../images/YOMIRU-logo-blackbase.png" width="150px" alt="YOMIRUのロゴ">
-        <br>
-        <ul class="sitemap">
-            <li><a href="../index.html#about">YOMIRUとは?</a></li>
-            <li><a href="../index.html#point">機能</a></li>
-            <li><a href="../index.html#plan">プラン</a></li>
-            <li><a href="../index.html#signup">お申し込み</a></li>
-            <li><a href="../index.html#notice">お知らせ</a></li>
-            <li><a href="../index.html#login">ログイン</a></li>
-        </ul>
-        <br>
-        <ul class="company">
-            <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
-            <br>
-            <li>TEL.080-2081-9567</li>
-            <br>
-            <li>(C) 2025 YOMIRU_project, All Rights Reserved.</li>
-        </ul>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="../images/YOMIRU-logo-blackbase.png" width="150" alt="YOMIRUのロゴ">
+                <p class="footer-tagline">英語読み上げ算の読み手を育てる<br>オンラインサービス</p>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Site Map</p>
+                <ul class="footer-list">
+                    <li><a href="../index.html#about">YOMIRUとは?</a></li>
+                    <li><a href="../index.html#point">機能</a></li>
+                    <li><a href="../index.html#plan">プラン</a></li>
+                    <li><a href="../index.html#signup">お申し込み</a></li>
+                    <li><a href="../index.html#notice">お知らせ</a></li>
+                    <li><a href="../index.html#login">ログイン</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Official</p>
+                <ul class="footer-list">
+                    <li><a href="../press-release/index.html">プレスリリース</a></li>
+                    <li><a href="../files/YOMIRU利用規約20251220.pdf" target="_blank">利用規約</a></li>
+                    <li><a href="../files/YOMIRUプライバシーポリシー.pdf" target="_blank">プライバシーポリシー</a></li>
+                    <!-- <li><a href="../company/index.html">法人向けページ</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Contact</p>
+                <ul class="footer-list footer-list-plain">
+                    <li>YOMIRU_project</li>
+                    <li>〒771-3310 徳島県名西郡神山町神領西上角175-1 神山まるごと高専寮</li>
+                    <li>TEL. 080-2081-9567</li>
+                    <li><a href="mailto:yomiru.system@gmail.com">yomiru.system@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">(C) 2026 YOMIRU_project, All Rights Reserved.</p>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>

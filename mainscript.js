@@ -11,14 +11,42 @@ for (let i = targets.length; i--;) {
     });
     observer.observe(targets[i]);
 }
+
+const revealGroups = [
+    { selector: '.about, .point, .plan, .notice, .signup, .login, .link', step: 0.08 },
+    { selector: '.underline', step: 0.05 },
+    { selector: '.card, .plancard, .link_content, .login_button, .login_button_junbi, #nextButton', step: 0.12 }
+];
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, {
+    threshold: 0.18,
+    rootMargin: '0px 0px -10% 0px'
+});
+
+revealGroups.forEach(({ selector, step }) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+        element.classList.add('reveal-on-scroll');
+        element.style.setProperty('--reveal-delay', `${index * step}s`);
+        revealObserver.observe(element);
+    });
+});
+
 const header = document.getElementById('menu');
 const headerOffset = header.offsetTop;
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > headerOffset) {
         header.classList.add('fixed');
+        document.body.classList.add('is-scrolled');
     } else {
         header.classList.remove('fixed');
+        document.body.classList.remove('is-scrolled');
     }
 });
 

@@ -151,7 +151,7 @@
                 <h1>読みを、見る。</h1>
             </div>
             <div class="smartphone_font">
-                <h1>読みを、<br>見る。</h1>
+                <h1><span>読みを、</span><span>見る。</span></h1>
             </div>
             <img src="images/YOMIRU-logo-whitebase.png" width="50%" alt="YOMIRUのロゴ">
         </div>
@@ -190,15 +190,15 @@
         <div class="cards">
             <div class="card">
                 <h3>音声認識機能</h3>
-                <p><span>あなたの読んだ</span>英語読み上げ算の<br>レベルを測定します。</p>
+                <p><span>あなたの読んだ</span><br>英語読み上げ算の<br>レベルを測定します。</p>
             </div>
             <div class="card">
                 <h3>模範音声機能</h3>
-                <p><span>全国トップレベル</span>の先生の<br>音声が聞けます。</p>
+                <p><span>全国トップレベル</span><br>の先生の音声が聞けます。</p>
             </div>
             <div class="card">
                 <h3>問題作成機能</h3>
-                <p>あなた独自の問題を作成・保存して<br>何回でも練習できます。</p>
+                <p><span>あなた独自の問題を</span><br>作成・保存して<br>何回でも練習できます。</p>
             </div>
         </div>
     </section>
@@ -208,41 +208,62 @@
         <p>現在2つのプランを公開しています。</p>
         <div class="plans">
             <div class="plancard">
-                <h3>YOMIRU_basic</h3>
-                <p>YOMIRUを試してみたい方はこちら。<br></p>
-                <table align="center">
-                    <tr>
-                        <th>音声認識機能</th>
-                        <th>模範音声機能</th>
-                        <th>料金</th>
-                    </tr>
-                    <tr>
-                        <td>◯</td>
-                        <td>×</td>
-                        <td>ずっと無料</td>
-                    </tr>
+                <div class="plan-card-header">
+                    <h3>YOMIRU_basic</h3>
+                    <p>YOMIRUを試してみたい方はこちら。</p>
+                </div>
+                <table class="plan-table" aria-label="YOMIRU_basic の機能一覧">
+                    <tbody>
+                        <tr>
+                            <th scope="row">音声認識機能</th>
+                            <td><span class="status-badge status-available">利用可</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">模範音声機能</th>
+                            <td><span class="status-badge status-unavailable">対象外</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">問題作成機能</th>
+                            <td><span class="status-badge status-unavailable">対象外</span></td>
+                        </tr>
+                        <tr class="price-row">
+                            <th scope="row">料金</th>
+                            <td><span class="price-emphasis">ずっと無料</span></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div class="plancard">
-                <h3>YOMIRU_student</h3>
-                <p>生徒の皆さんにはとっておきのプラン。<br></p>
-                <table align="center">
-                    <tr>
-                        <th>音声認識機能</th>
-                        <th>模範音声機能</th>
-                        <th>料金</th>
-                    </tr>
-                    <tr>
-                        <td>◯</td>
-                        <td>◯</td>
-                        <td>500円</td>
-                    </tr>
+                <div class="plan-card-header">
+                    <h3>YOMIRU_student</h3>
+                    <p>生徒の皆さんにはとっておきのプラン。</p>
+                </div>
+                <table class="plan-table" aria-label="YOMIRU_student の機能一覧">
+                    <tbody>
+                        <tr>
+                            <th scope="row">音声認識機能</th>
+                            <td><span class="status-badge status-available">利用可</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">模範音声機能</th>
+                            <td><span class="status-badge status-available">利用可</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">問題作成機能</th>
+                            <td><span class="status-badge status-available">利用可</span></td>
+                        </tr>
+                        <tr class="price-row">
+                            <th scope="row">料金</th>
+                            <td><span class="price-emphasis">¥500</span></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </section>
 
     <h2 class="underline">お知らせ</h2>
+    <p class="notice-link"><a href="press-release/index.html">プレスリリース一覧を見る</a></p>
     <section class="notice" id="notice">
         <table align="center">
             <tr>
@@ -341,7 +362,7 @@
         <div class="buttons">
             <a href="./YOMIRU_basic/basic-login.html" class="login_button">YOMIRU_basic</a>
             <a href="YOMIRU_student/student-login.html" class="login_button">YOMIRU_student</a>
-            <a href="" class="login_button_junbi">準備中</a><br>
+            <a class="login_button_junbi">準備中</a><br>
         </div>
     </section>
 
@@ -366,24 +387,42 @@
     </section>
 
     <footer>
-        <img src="images/YOMIRU-logo-blackbase.png" width="150px" alt="YOMIRUのロゴ">
-        <br>
-        <ul class="sitemap">
-            <li><a href="#about">YOMIRUとは?</a></li>
-            <li><a href="#point">機能</a></li>
-            <li><a href="#plan">プラン</a></li>
-            <li><a href="#signup">お申し込み</a></li>
-            <li><a href="#notice">お知らせ</a></li>
-            <li><a href="#login">ログイン</a></li>
-        </ul>
-        <br>
-        <ul class="company">
-            <li>〒771-3310徳島県名西郡神山町神領西上角175-1神山まるごと高専寮</li>
-            <br>
-            <li>TEL.080-2081-9567</li>
-            <br>
-            <li>(C) 2025 YOMIRU_project, All Rights Reserved.</li>
-        </ul>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/YOMIRU-logo-blackbase.png" width="150" alt="YOMIRUのロゴ">
+                <p class="footer-tagline">英語読み上げ算の読み手を育てる<br>オンラインサービス</p>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Site Map</p>
+                <ul class="footer-list">
+                    <li><a href="#about">YOMIRUとは?</a></li>
+                    <li><a href="#point">機能</a></li>
+                    <li><a href="#plan">プラン</a></li>
+                    <li><a href="#signup">お申し込み</a></li>
+                    <li><a href="#notice">お知らせ</a></li>
+                    <li><a href="#login">ログイン</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Official</p>
+                <ul class="footer-list">
+                    <li><a href="press-release/index.html">プレスリリース</a></li>
+                    <li><a href="files/YOMIRU利用規約20251220.pdf" target="_blank">利用規約</a></li>
+                    <li><a href="files/YOMIRUプライバシーポリシー.pdf" target="_blank">プライバシーポリシー</a></li>
+                    <!-- <li><a href="company/index.html">法人向けページ</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Contact</p>
+                <ul class="footer-list footer-list-plain">
+                    <li>YOMIRU_project</li>
+                    <li>〒771-3310 徳島県名西郡神山町神領西上角175-1 神山まるごと高専寮</li>
+                    <li>TEL. 080-2081-9567</li>
+                    <li><a href="mailto:yomiru.system@gmail.com">yomiru.system@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">(C) 2026 YOMIRU_project, All Rights Reserved.</p>
     </footer>
     <script src="mainscript.js"></script>
 </body>

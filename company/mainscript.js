@@ -11,6 +11,32 @@ for (let i = targets.length; i--;) {
     });
     observer.observe(targets[i]);
 }
+
+const revealGroups = [
+    { selector: '.about, .point', step: 0.08 },
+    { selector: '.underline', step: 0.05 },
+    { selector: '.card', step: 0.12 }
+];
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, {
+    threshold: 0.18,
+    rootMargin: '0px 0px -10% 0px'
+});
+
+revealGroups.forEach(({ selector, step }) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+        element.classList.add('reveal-on-scroll');
+        element.style.setProperty('--reveal-delay', `${index * step}s`);
+        revealObserver.observe(element);
+    });
+});
+
 const header = document.getElementById('menu');
 const headerOffset = header.offsetTop;
 

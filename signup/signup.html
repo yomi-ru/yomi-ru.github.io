@@ -22,32 +22,76 @@
 </head>
 
 <body>
-    <a href="../index.html" style="border-bottom: none;">
-        <img src="../../images/YOMIRU-logo-whitebase.png" class="topimage" style="padding-top: 30px;">
-    </a>
-    <h2>YOMIRU_basicに登録する</h2>
-    <form id="signupForm">
-        <input type="email" id="email" placeholder="メールアドレス" required />
-        <input type="password" id="password" placeholder="パスワード" required />
-        <div id="password-strength-bar">
-            <div id="password-strength-fill"></div>
-        </div>
-        <input type="tel" id="phone-number" placeholder="電話番号" required />
-        <div class="signup">
-            <p>※チェックを入れてください</p>
-            <div class="box-doc-wrap">
-                <input type="checkbox" id="initialButton" onclick="showNextButton()">
-                <span class="box-doc-text">
-                    <a href="../files/YOMIRU利用規約20251220.pdf">利用規約</a>、<a
-                        href="../files/YOMIRUプライバシーポリシー.pdf">プライバシーポリシー</a>に同意します
-                </span>
+    <main class="auth-shell">
+        <div class="auth-panel">
+            <a href="../index.html" class="auth-logo-link">
+                <img src="../images/YOMIRU-logo-whitebase.png" class="topimage auth-logo" alt="YOMIRUのロゴ">
+            </a>
+            <div class="auth-copy">
+                <h2>YOMIRU_basicに登録する</h2>
+                <p>今日からあなたも読み手です。</p>
             </div>
-
+            <form id="signupForm" class="auth-form">
+                <input type="email" id="email" placeholder="メールアドレス" required />
+                <input type="password" id="password" placeholder="パスワード" required />
+                <div id="password-strength-bar">
+                    <div id="password-strength-fill"></div>
+                </div>
+                <input type="tel" id="phone-number" placeholder="電話番号" required />
+                <div class="signup auth-consent">
+                    <p>※チェックを入れてください</p>
+                    <div class="box-doc-wrap">
+                        <input type="checkbox" id="initialButton" onclick="showNextButton()">
+                        <span class="box-doc-text">
+                            <a href="../files/YOMIRU利用規約20251220.pdf">利用規約</a>、<a
+                                href="../files/YOMIRUプライバシーポリシー.pdf">プライバシーポリシー</a>に同意します
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="signup-button" id="nextButton" style="display: none;">登録する</button>
+            </form>
+            <p id="error" class="error auth-error"></p>
         </div>
-        <button type="submit" class="signup-button" id="nextButton" style="display: none;">登録する</button>
-    </form>
+    </main>
 
-    <p id="error" class="error"></p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="../images/YOMIRU-logo-blackbase.png" width="150" alt="YOMIRUのロゴ">
+                <p class="footer-tagline">英語読み上げ算の読み手を育てる<br>オンラインサービス</p>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Site Map</p>
+                <ul class="footer-list">
+                    <li><a href="../index.html#about">YOMIRUとは?</a></li>
+                    <li><a href="../index.html#point">機能</a></li>
+                    <li><a href="../index.html#plan">プラン</a></li>
+                    <li><a href="../index.html#signup">お申し込み</a></li>
+                    <li><a href="../index.html#notice">お知らせ</a></li>
+                    <li><a href="../index.html#login">ログイン</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Official</p>
+                <ul class="footer-list">
+                    <li><a href="../press-release/index.html">プレスリリース</a></li>
+                    <li><a href="../files/YOMIRU利用規約20251220.pdf" target="_blank">利用規約</a></li>
+                    <li><a href="../files/YOMIRUプライバシーポリシー.pdf" target="_blank">プライバシーポリシー</a></li>
+                    <!-- <li><a href="../company/index.html">法人向けページ</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="footer-heading">Contact</p>
+                <ul class="footer-list footer-list-plain">
+                    <li>YOMIRU_project</li>
+                    <li>〒771-3310 徳島県名西郡神山町神領西上角175-1 神山まるごと高専寮</li>
+                    <li>TEL. 080-2081-9567</li>
+                    <li><a href="mailto:yomiru.system@gmail.com">yomiru.system@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">(C) 2026 YOMIRU_project, All Rights Reserved.</p>
+    </footer>
 
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
