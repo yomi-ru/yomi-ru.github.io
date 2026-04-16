@@ -109,28 +109,29 @@ h1 {
 }
 
 /* ここから404ページ */
-.fzf{
+.fzf {
     text-align: left;
     margin: 20px;
 }
 
-.fzf img{
+.fzf img {
     width: 200px;
 }
 
-.fzf_text{
+.fzf_text {
     text-align: center;
 }
 
-.back{
+.back {
     color: #c1d0d4;
     text-decoration: underline;
     font-size: 24px;
 }
 
-.back:hover{
+.back:hover {
     text-decoration: none;
 }
+
 /* 404ページここまで */
 
 /* 以下共通設計 */
@@ -167,7 +168,7 @@ h2 {
     transform: scaleX(1);
 }
 
-h3{
+h3 {
     font-size: 34px;
     padding-top: 24px;
     padding-bottom: 18px;
@@ -372,7 +373,7 @@ span {
     overflow: hidden;
 }
 
-.plan-table tr + tr {
+.plan-table tr+tr {
     border-top: 1px solid rgba(20, 15, 14, 0.16);
 }
 
@@ -482,14 +483,14 @@ span {
 }
 
 .notice table a,
-#nextButton a{
+#nextButton a {
     color: var(--color-text);
     text-decoration: none;
     border-bottom: 1px solid rgba(193, 208, 212, 0.7);
 }
 
 .notice table a:hover,
-#nextButton a:hover{
+#nextButton a:hover {
     color: #c1d0d4;
     text-decoration: none;
     border-bottom: none;
@@ -1380,6 +1381,11 @@ footer a:hover {
 
     .press-list {
         gap: 16px;
+    }
+
+    .menu li,
+    .student_menu li {
+        font-size: 24px;
     }
 
     .press-item {
